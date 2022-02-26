@@ -143,23 +143,18 @@ If the length is more than 7, reassign the value of 'someNum' to the value of th
 
 
 
-
-/* _________________________________________________________________________ Couldnt Figure it out _________________________________________________________________________
-
 let arrayTotal = 0;
 for (let i = 0; i < myFavoriteNumbers.length; i++) {
     arrayTotal += myFavoriteNumbers[i];
     someNum = (arrayTotal / 5)
 }
-
-
-
 if (myFavoriteNumbers.length < 7){
     console.log('There are not enough elements in this array')
-
-
-_________________________________________________________________________ Couldnt Figure it out _________________________________________________________________________ */
-
+}
+else {
+    someNum = myFavoriteNumbers[6]
+    console.log(myFavoriteNumbers)
+  }
 
 
 
@@ -212,7 +207,6 @@ let letterGrade = 'B'
 // Do not edit the code above.
 
 /* Use a switch statement on 'letterGrade' and console.log the appropriate response.
-
 If A: "The student is doing excellently."
 If B: "The student is doing well."
 If C: "The student is doing alright."
@@ -222,7 +216,14 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
+switch (letterGrade) {
+  case A: console.log('The student is doing excellently.')
+  case B: console.log('The student is doing well.')
+  case C: console.log('The student is doing alright.')
+  case D: console.log('The student is not doing very well.')
+  case F: console.log('The student is failing.')
+  default: console.log('Not an eligible grade.')
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -232,7 +233,6 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
   If the number is divisible by 5, console.log 'mountain'. 
   If the number is divisible by 5 & 3, console.log 'Devmountain'. 
   If the number is not divisible by 5 or 3, console.log the number itself. Hint: Look up the modulo operator.
-
   Your output should look like:
   1
   2
@@ -254,3 +254,16 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('Devmountain')
+  } else if (i % 5 === 0) {
+    console.log('mountain')
+  } else if (i % 3 === 0) {
+    console.log('Dev')
+  } else {
+    console.log(i)
+  }
+}
